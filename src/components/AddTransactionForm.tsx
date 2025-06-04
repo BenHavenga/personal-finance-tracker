@@ -2,7 +2,6 @@
 import { useState } from "react";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
-import { Select, SelectItem } from "@/components/ui/select";
 import { Transaction } from "@/types/finance";
 import { v4 as uuidv4 } from "uuid";
 

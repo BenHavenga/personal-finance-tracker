@@ -73,13 +73,9 @@ export default function Home() {
       ? transactions
       : transactions.filter((t) => t.date.startsWith(selectedMonth));
 
-  const income = filteredTransactions
-    .filter((t) => t.type === "income")
-    .reduce((sum, t) => sum + t.amount, 0);
   const expenses = filteredTransactions
     .filter((t) => t.type === "expense")
     .reduce((sum, t) => sum + t.amount, 0);
-  const balance = income - expenses;
   const overBudget = expenses > monthlyBudget;
   const netWorth =
     transactions
